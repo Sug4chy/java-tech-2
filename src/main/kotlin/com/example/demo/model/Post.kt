@@ -1,3 +1,5 @@
 package com.example.demo.model
 
-class Post(val text: String, val likes: Int?)
+import java.util.Date
+
+class Post(val text: String, val creationDate: Date, val likes: Int = 0)
