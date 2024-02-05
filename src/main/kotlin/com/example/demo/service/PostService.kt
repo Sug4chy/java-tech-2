@@ -6,11 +6,17 @@ import java.util.*
 
 @Service
 class PostService {
+    private val posts: MutableList<Post> = mutableListOf(
+        Post("Пост 1", Date()),
+        Post("Пост 2", Date()),
+        Post("Пост 3", Date())
+    )
+
     fun listAllPosts(): List<Post> {
-        return listOf(
-            Post("Пост 1", Date()),
-            Post("Пост 2", Date()),
-            Post("Пост 3", Date())
-        )
+        return posts
+    }
+
+    fun create(text: String) {
+        posts.add(Post(text, Date()))
     }
 }
