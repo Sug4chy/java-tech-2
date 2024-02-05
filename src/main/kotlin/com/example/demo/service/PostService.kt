@@ -7,9 +7,9 @@ import java.util.*
 @Service
 class PostService {
     private val posts: MutableList<Post> = mutableListOf(
-        Post("Пост 1", Date()),
-        Post("Пост 2", Date()),
-        Post("Пост 3", Date())
+        Post(0,"Пост 1", Date()),
+        Post(1, "Пост 2", Date()),
+        Post(2, "Пост 3", Date())
     )
 
     fun listAllPosts(): List<Post> {
@@ -17,6 +17,6 @@ class PostService {
     }
 
     fun create(text: String) {
-        posts.add(Post(text, Date()))
+        posts.add(Post(posts.size.toLong(), text, Date()))
     }
 }
