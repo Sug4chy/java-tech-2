@@ -13,6 +13,6 @@ data class Post(
     val text: String,
     val creationDate: Date,
     var likes: Int = 0,
-){
+) {
     constructor() : this(0, "", Date())
 }
