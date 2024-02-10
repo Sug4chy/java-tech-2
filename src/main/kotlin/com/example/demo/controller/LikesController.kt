@@ -17,6 +17,6 @@ class LikesController(
     @RequestMapping(path = ["/post/{id}/like"], method = [RequestMethod.POST])
     fun like(@PathVariable("id") id: Long): String {
         val likes = likesService.like(id)
-        return "" + likes
+        return "$likes"
     }
 }

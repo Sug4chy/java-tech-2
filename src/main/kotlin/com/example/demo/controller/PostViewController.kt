@@ -24,6 +24,6 @@ class PostViewController(
     @ResponseBody
     @RequestMapping(path = ["/post/{id}"], method = [RequestMethod.GET])
     fun single(@PathVariable id: Long): String {
-        return "Здесь будет страница поста №${id}"
+        return "Здесь будет страница поста №$id"
     }
 }
